@@ -1,0 +1,26 @@
+---
+
+### File 2: The Critical `.gitignore` File
+When working with AI agents, you often use `.env` files or local configs to store API keys. If your secret keys leak onto public GitHub repositories, bots will steal them instantly. 
+
+Create a file named exactly **`.gitignore`** (include the dot at the beginning!) and paste this standard blocker code:
+
+```text
+# Local virtual environment insulation tracking files
+venv/
+.venv/
+ENV/
+env/
+
+# Secret tokens and application variables configuration vaults
+.env
+.env.local
+.secret*
+secrets.toml
+
+# Python runtime cached files and logging dumps
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.streamlit/config.toml
